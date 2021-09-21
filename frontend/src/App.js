@@ -13,6 +13,9 @@ function App() {
         <Route exact path="/add-new">
           <AddNew />
         </Route>
+        <Route exact path="/edit">
+          <AddNew />
+        </Route>
         <Route exact path="/">
           <Home />
         </Route>

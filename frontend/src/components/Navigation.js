@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import {
   Navbar,
   Form,
@@ -7,7 +7,6 @@ import {
   FormControl,
   Container,
   Nav,
-  Row,
 } from "react-bootstrap";
 
 export default function Navigation() {
@@ -21,18 +20,18 @@ export default function Navigation() {
     <header>
       <Navbar bg="light" variant="light" expand="lg">
         <Container>
-          <Link className="btn btn-outline-success me-2" to="/">
-            Home
-          </Link>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse
             className="justify-content-between"
             id="navbarScroll"
           >
-            <Nav className="me-auto">
-              <Link className="btn btn-primary" to="/add-new">
+            <Nav>
+              <NavLink exact className="btn btn-outline-primary me-2" to="/">
+                Home
+              </NavLink>
+              <NavLink exact className="btn btn-outline-primary" to="/add-new">
                 Add New
-              </Link>
+              </NavLink>
             </Nav>
             <Form className="d-flex">
               <FormControl
