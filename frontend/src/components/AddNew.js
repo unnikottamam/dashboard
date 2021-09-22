@@ -8,7 +8,7 @@ function AddNew() {
         <Form>
           <Form.Group className="mb-2" controlId="formField1">
             <Form.Label>Field 1</Form.Label>
-            <Form.Control type="email" placeholder="" />
+            <Form.Control type="text" placeholder="" />
           </Form.Group>
           <Form.Group className="mb-2" controlId="formField2">
             <Form.Label>Field 2</Form.Label>

@@ -1,9 +1,10 @@
+import React from "react";
 import Navigation from "./components/Navigation";
 import { Route } from "react-router";
 import { BrowserRouter as Router } from "react-router-dom";
 import Home from "./components/Home";
 import { Container } from "react-bootstrap";
-import AddNew from "./components/AddNew";
+const AddNew = React.lazy(() => import("./components/AddNew"));
 
 function App() {
   return (

@@ -1,0 +1,32 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unnikottamam/dashboard.git"
+  },
+  "author": "Unni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unnikottamam/dashboard/issues"
+  },
+  "homepage": "https://github.com/unnikottamam/dashboard#readme",
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.7",
+    "validator": "^13.6.0"
+  }
+}
