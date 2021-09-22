@@ -4,19 +4,25 @@ const isEmpty = require("./is-empty");
 module.exports = function validateProductInput(data) {
   let errors = {};
 
-  data.title = !isEmpty(data.title) ? data.title : "";
   data.make = !isEmpty(data.make) ? data.make : "";
-
-  if (!Validator.isLength(data.title, { min: 5, max: 30 })) {
-    errors.title = "Title must be between 5 and 30 characters";
-  }
-
-  if (Validator.isEmpty(data.title)) {
-    errors.title = "Title is mandatory";
-  }
+  data.model = !isEmpty(data.model) ? data.model : "";
+  data.year = !isEmpty(data.year) ? data.year : "";
+  data.price = !isEmpty(data.price) ? data.price : "";
 
   if (Validator.isEmpty(data.make)) {
     errors.make = "Make is mandatory";
+  }
+
+  if (Validator.isEmpty(data.model)) {
+    errors.model = "Model is mandatory";
+  }
+
+  if (Validator.isEmpty(data.year)) {
+    errors.year = "Year is mandatory";
+  }
+
+  if (Validator.isEmpty(data.price)) {
+    errors.price = "Price is mandatory";
   }
 
   return {

@@ -8,6 +8,7 @@ import {
   Container,
   Nav,
 } from "react-bootstrap";
+import { FiPlus } from "react-icons/fi";
 
 export default function Navigation() {
   const [keyword, setKeyword] = React.useState("");
@@ -30,7 +31,7 @@ export default function Navigation() {
                 Home
               </NavLink>
               <NavLink exact className="btn btn-outline-primary" to="/add-new">
-                Add New
+                Add New <FiPlus />
               </NavLink>
             </Nav>
             <Form className="d-flex">

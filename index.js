@@ -21,7 +21,7 @@ mongoose
 
 // Routes
 const products = require("./routes/api/products");
-app.use("/", products);
+app.use("/products", products);
 
 // Create server
 app.set("port", PORT);

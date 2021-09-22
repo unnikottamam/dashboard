@@ -46,8 +46,10 @@ router.post("/", (req, res) => {
 
   // Add new product
   const newProduct = {
-    title: req.body.title,
     make: req.body.make,
+    model: req.body.model,
+    year: req.body.year,
+    price: req.body.price,
   };
   new Product(newProduct).save().then((product) => res.json(product));
 });
