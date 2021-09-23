@@ -5,6 +5,13 @@ const validateProductInput = require("../../validation/product");
 const router = express.Router();
 
 /**
+ * @route   GET api/products/test
+ * @desc    Test products route* [Will delete later on]
+ * @access  Public
+ */
+router.get("/test", (req, res) => res.json({ msg: "Products Test API" }));
+
+/**
  * @route   GET api/products
  * @desc    All products route
  * @access  Public
@@ -41,7 +48,7 @@ router.post("/", (req, res) => {
   const { errors, isValid } = validateProductInput(req.body);
   // Check validation
   if (!isValid) {
-    return res.status(400).json(errors);
+    return res.status(404).json({ errors, isValid });
   }
 
   // Add new product

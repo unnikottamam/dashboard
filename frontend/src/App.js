@@ -4,7 +4,7 @@ import { Route } from "react-router";
 import { BrowserRouter as Router } from "react-router-dom";
 import Home from "./components/Home";
 import { Container } from "react-bootstrap";
-const AddNew = React.lazy(() => import("./components/AddNew"));
+import AddNew from "./components/AddNew";
 
 function App() {
   return (

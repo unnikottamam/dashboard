@@ -11,10 +11,8 @@ var productSchema = new Schema({
     required: true,
   },
   year: {
-    type: Number,
+    type: String,
     required: true,
-    min: 4,
-    max: 4,
   },
   price: {
     type: String,

@@ -1,11 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const http = require("http");
-const PORT = process.env.PORT || 5000;
+const cors = require("cors");
 
 // Define app
 const app = express();
+
+// CORS
+app.use(cors());
 
 // Body parser
 app.use(bodyParser.json());
@@ -21,8 +23,8 @@ mongoose
 
 // Routes
 const products = require("./routes/api/products");
-app.use("/products", products);
+app.use("/api/products", products);
 
 // Create server
-app.set("port", PORT);
-http.createServer(app).listen(parseInt(PORT, 10));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on the port : ${PORT}`));
